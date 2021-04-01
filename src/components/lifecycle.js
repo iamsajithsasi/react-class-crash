@@ -3,8 +3,8 @@ import React, { Component } from "react";
 // componentDidMount() {}
 // componentWillUnMount() {}
 
-// componentDidUpdate() {} // prevProps, prevState
-// shouldComponentUpdate() {}
+// componentDidUpdate() {} // prevProps, prevState, snapshot
+// shouldComponentUpdate() {} // nextProps, nextState
 
 // getDerivedStateFromError() {}
 // componentDidCatch() {}
