@@ -52,13 +52,13 @@ export default class ReactBasics extends Component {
           <input
             type="text"
             name="name"
-            value={this.state?.name}
+            defaultValue={this.state?.name}
             onChange={this.handleInputChange}
           />
           <input
             type="email"
             name="email"
-            value={this.state?.email}
+            defaultValue={this.state?.email}
             onChange={this.handleInputChange}
           />
         </form>
