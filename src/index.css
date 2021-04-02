@@ -41,15 +41,15 @@ a:hover,
 
 .close {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  font-size: 12px;
+  top: -9px;
+  right: -9px;
   cursor: pointer;
   background: #fff;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   display: flex;
-  font-size: 12px;
   align-items: center;
   justify-content: center;
 }

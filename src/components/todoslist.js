@@ -21,7 +21,7 @@ export default class Todoslist extends Component {
     return (
       <>
         <div>
-          {list.map((item, index) => (
+          {list.slice(0, 5).map((item, index) => (
             <p key={index}>
               {index + 1} - {item.title}
             </p>

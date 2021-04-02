@@ -5,7 +5,11 @@ import Errorboundary from "./components/errorboundary";
 import Hocfile from "./components/hocfile";
 import LifeCyleMethods from "./components/lifecycle";
 import PortalPop from "./components/portal";
+import ProptypesBox from "./components/proptypes";
 import RefReact from "./components/ref";
+import RenderBox from "./components/render";
+import RenderA from "./components/rendera";
+import RenderB from "./components/renderb";
 
 const Todoslist = lazy(() => import("./components/todoslist.js"));
 
@@ -42,6 +46,15 @@ function App() {
           <Todoslist />
         </Suspense>
         <Hocfile />
+        <RenderBox
+          render={(state) => (
+            <>
+              <RenderA location={state} />
+              <RenderB location={state} />
+            </>
+          )}
+        />
+        <ProptypesBox name="WebHungaa - React Class"/>
 
         <button onClick={() => setPopShow(true)}>Show Portal</button>
         {popShow && (
