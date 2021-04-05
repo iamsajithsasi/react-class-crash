@@ -6,15 +6,18 @@ import Hocfile from "./components/hocfile";
 import LifeCyleMethods from "./components/lifecycle";
 import PortalPop from "./components/portal";
 import ProptypesBox from "./components/proptypes";
+import PureComponentBox from "./components/purecomp";
 import RefReact from "./components/ref";
 import RenderBox from "./components/render";
 import RenderA from "./components/rendera";
 import RenderB from "./components/renderb";
+import HooksBox from "./components/hooks";
 
 const Todoslist = lazy(() => import("./components/todoslist.js"));
 
 function App() {
   const [popShow, setPopShow] = useState(false);
+  const [count, setCount] = useState("WebHungaa");
   const closePopShow = () => {
     setPopShow(false);
   };
@@ -30,6 +33,10 @@ function App() {
   ) {
     console.log("Portal Log ", startTime, baseDuration);
   }
+
+  // setInterval(() => {
+  //   setCount("WebHungaa");
+  // }, 1000);
 
   return (
     <>
@@ -54,7 +61,8 @@ function App() {
             </>
           )}
         />
-        <ProptypesBox name="WebHungaa - React Class"/>
+        <ProptypesBox name="WebHungaa - React Class" />
+        <PureComponentBox count={count} />
 
         <button onClick={() => setPopShow(true)}>Show Portal</button>
         {popShow && (
@@ -66,6 +74,7 @@ function App() {
           </PortalPop>
         )}
       </Errorboundary>
+      <HooksBox />
     </>
   );
 }

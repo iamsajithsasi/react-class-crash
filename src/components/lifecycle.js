@@ -23,12 +23,21 @@ export default class LifeCyleMethods extends Component {
     console.log("component Did mount");
   }
 
+  static getDerivedStateFromProps(props, state) {
+    console.log("derived props ", props, state);
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log("snap ", prevProps, prevState);
+    return null;
+  }
+
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("updatd ", prevProps, this.props, prevState, snapshot);
+    console.log("comp did update ", prevProps, this.props, prevState, snapshot);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
+    console.log("should comp update ", nextProps, nextState);
     if (this.state.text_a !== nextState.text_a) {
       return true;
     } else {
